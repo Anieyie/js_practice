@@ -46,22 +46,58 @@
   <div class="container">
     <input type="text" class="calculation">
     <div class="Calculator">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="fouth">*</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="six">-</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="j">/</button>
-      <button class="c">%</button>
-      <button>0</button>
-      <button class="d">=</button>
-      <button class="g">+</button>
+      <button onclick="calculation += '1';
+      console.log(calculation);
+      ">1</button>
+      
+      <button onclick="calculation += '2';
+      console.log(calculation);
+      ">2</button>
+      <button onclick="calculation += '3';
+      console.log(calculation);
+      ">3</button>
+      <button onclick="calculation += ' * ';
+      console.log(calculation);
+      " class="fouth">*</button>
+      <button onclick="calculation += '4';
+      console.log(calculation);
+      ">4</button>
+      <button onclick="calculation += '5';
+      console.log(calculation);
+      ">5</button>
+      <button onclick="calculation += '6';
+      console.log(calculation);
+      ">6</button>
+      <button onclick="calculation += ' - ';
+      console.log(calculation);
+      " class="six">-</button>
+      <button onclick="calculation += '7';
+      console.log(calculation);
+      ">7</button>
+      <button onclick="calculation += '8';
+      console.log(calculation);
+      ">8</button>
+      <button onclick="calculation += '9';
+      console.log(calculation);
+      ">9</button>
+      <button onclick="calculation += ' / ';
+      console.log(calculation);
+      " class="j">/</button>
+      <button onclick="calculation += ' % ';
+      console.log(calculation);
+      " class="c">%</button>
+
+      <button onclick="calculation += '0';
+      console.log(calculation);
+      ">0</button>
+
+      <button onclick="calculation = eval(calculation);
+      console.log(calculation);
+      " class="d">=</button>
+      <button onclick="calculation += ' + ';
+      console.log(calculation);
+      " class="g">+</button>
+      
       <button class="j">C</button>
     </div>
   </div>
