@@ -6,15 +6,14 @@
   <title>Document</title>
 </head>
 <body>
+  <button>9a</button>
+  <button class="bb">9b</button>
   <script>
-    const age = 5;
-    const isHoliday = false;
+    console.log(document.querySelector('button'));
 
-    if ((age <= 6 || age >= 65) && !isHoliday) {
-      document.write('Discount');
-    } else {
-      document.write('No discount');
-    }
+   const changed = document.querySelector('.bb');
+      
+   console.log(changed.innerText = '9b done!');
   </script>
 </body>
 </html>

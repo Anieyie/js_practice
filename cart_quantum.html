@@ -94,16 +94,21 @@
     function updateCartQuantity(item) {
       if (cartQuantity + item > 10) {
         alert('cart is full, cannot take more than 10 items');
-
-      } else if (cartQuantity + item < 0) {
-        alert('Not enough items in the cart');
-
-      } else {
-        cartQuantity += item;
-        document.getElementById('container').innerHTML = (`Cart quantity: ${cartQuantity}`);
+        return;
       }
       
+      if (cartQuantity + item < 0) {
+        alert('Not enough items in the cart');
+        return;
+      } 
+        cartQuantity += item;
+        
+        displayCartQuantity()
     }
+
+    function displayCartQuantity() {
+      document.getElementById('container').innerHTML = (`Cart quantity: ${cartQuantity}`);
+      }
     </script>
 </body>
 </html>

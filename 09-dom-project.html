@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Project</title>
+</head>
+<body>
+  <p>Youtube Subscibe Button</p>
+  <button onclick="
+    subscribe();
+  " class="js-subscribe-button">Subscibe</button>
+
+  <P>Amazon Shipping Calculator</P>
+  <input placeholder="Cost of order" class="js-cost-input" onkeydown=" handleCostKeydown(event);
+  ">
+  <button onclick="
+    calculateTotal();
+  ">Calculate</button>
+  <p class="js-total-cost"></p>
+
+
+
+  <script>
+   // String(25)
+   // console.log('25' - 5);
+   // console.log('25' + 5);
+
+   window.document
+   window.console.log('window');
+   window.alert 
+
+
+    function handleCostKeydown(event) {
+      if (event.key === 'Enter') {
+        calculateTotal();
+      }
+    }
+
+    function calculateTotal() {
+    const inputElement = document.querySelector('.js-cost-input');
+    let cost = Number(inputElement.value); 
+      //The Number takes what is in the bracket and convert it into a number, this is becase whatever comes from the html input is sent in a string and not a number 
+    if (cost < 40) {
+      cost += 10;
+    }
+
+
+    document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+    }
+
+  
+
+    function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button');
+      
+      if (buttonElement.innerText === 'Subscibe') {
+        buttonElement.innerHTML = 'Subscribed';
+      } else {
+        buttonElement.innerHTML = 'Subscibe'
+      }
+    }
+  </script>
+</body>
+</html>

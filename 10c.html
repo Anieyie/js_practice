@@ -6,15 +6,10 @@
   <title>Document</title>
 </head>
 <body>
+  <button class="js-button">Test</button>
   <script>
-    const age = 5;
-    const isHoliday = false;
-
-    if ((age <= 6 || age >= 65) && !isHoliday) {
-      document.write('Discount');
-    } else {
-      document.write('No discount');
-    }
+    const button = document.querySelector('.js-button');
+    console.log(button.classList.contains('js-button'));
   </script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function countWords(words) {
+      const result = {};
+
+      for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+
+        if (!result[word]) {
+          result[word] = 1;
+        } else {
+          result[word]++;
+        }
+      }
+
+      return result;
+    }
+
+    const fruits = countWords(['apple', 'grape', 'apple', 'gold' ,'apple']);
+    console.log(fruits['gold']);
+
+    console.log(countWords(['apple', 'grape', 'apple', 'gold' ,'apple']));
+
+
+    let furnitures = new Map()
+    
+     furnitures.set('chairs', ['sofa', 'stool', 'bench'])
+     furnitures.set('Electronics', {
+        'televisions': ['LG', 'skyrun'],
+        'camera': ['cannon', 'sony']
+      })
+      furnitures.set('curtains', 10)
+  
+     furnitures.delete('chairs')
+   console.log(furnitures.get('Electronics'));
+   console.log(furnitures);
+
+    
+  </script>
+</body>
+</html>

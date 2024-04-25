@@ -7,14 +7,12 @@
 </head>
 <body>
   <script>
-    const age = 5;
-    const isHoliday = false;
-
-    if ((age <= 6 || age >= 65) && !isHoliday) {
-      document.write('Discount');
-    } else {
-      document.write('No discount');
+    function getLastValue(array) {
+      const lastIndex = array.length -1;
+      return array[lastIndex];
     }
+    console.log(getLastValue([1, 20, 22, 24, 5]));
+    console.log(getLastValue(['hi', 'hello', 'good'])); 
   </script>
 </body>
 </html>
